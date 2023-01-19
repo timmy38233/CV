@@ -151,7 +151,7 @@ li {
 
 .stand-out {
     position: relative;
-    translate: -25px;
+    transform: translateX(-25px);
     width: calc(100% + 50px);
     box-shadow: 0px 13px 9px -5px rgba(0, 0, 0, 0.5);
 }
@@ -280,7 +280,7 @@ li {
     }
 
     .stand-out {
-        translate: none;
+        transform: translateX(0);
         width: 100%;
     }
 
