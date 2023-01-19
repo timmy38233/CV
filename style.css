@@ -5,12 +5,13 @@
     border-collapse: collapse;
     margin: 0;
     padding: 0;
-    --border-color: rgba(255, 255, 255, 0.2);
     --dark-color: #262E33;
     --not-so-dark-color: #373F44;
     --background-color: #abbb60;
+    --contrast-color: #7292BA;
 
     --hero-font-size: calc(10px + 60 * (100vw / 1024));
+    --banner-font-size: calc(var(--hero-font-size)/2.5);
 }
 
 body {
@@ -22,12 +23,12 @@ body {
 }
 
 a {
-    color: var(--dark-color);
+    color: #fff;
 }
 
 a:hover,
 a:focus {
-    color: var(--not-so-dark-color);
+    color: #eee;
 }
 
 li {
@@ -42,10 +43,11 @@ li {
     min-height: 100vh;
     border-left: 1px solid;
     border-right: 1px solid;
-    border-color: #ccc;
+    border-color: #999;
     margin: 0 auto;
     padding: 0;
     background-color: var(--background-color);
+    box-shadow: 0 0 15px #aaa;
 }
 
 
@@ -60,6 +62,7 @@ li {
 .welcome__textwrapper {
     position: relative;
     display: inline-block;
+    text-align: center;
     width: 50%;
     height: 50%;
     min-width: 200px;
@@ -126,7 +129,8 @@ li {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 10vw;
+    min-height: 10vw;
+    padding: 25px;
     background: var(--dark-color);
     background: linear-gradient(var(--dark-color) 0%, var(--dark-color) 25%, var(--not-so-dark-color) 100%);
 
@@ -137,7 +141,7 @@ li {
     color: #fff;
     text-shadow: 0 0 0 transparent;
     font-weight: 100;
-    font-size: calc(var(--hero-font-size)/2.5);
+    font-size: var(--banner-font-size);
     transition: text-shadow 0.25s ease-in-out;
 }
 
@@ -177,6 +181,8 @@ li {
 
 .content {
     padding: 25px;
+    background-color: var(--contrast-color);
+    color: #fff;
 }
 
 .facts,
@@ -242,13 +248,15 @@ li {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 10vw;
-    background: linear-gradient(var(--not-so-dark-color) 0%, var(--dark-color) 50%, var(--dark-color) 100%);
+    padding: 25px;
+    min-height: 10vw;
+    background: var(--background-color);
+    border-top: 1px solid var(--dark-color);
 }
 
 .goodbye__text {
     text-align: center;
-    color: #fff;
-    font-weight: 100;
-    font-size: calc(var(--hero-font-size)/2.5);
+    color: #333;
+    font-weight: 900;
+    font-size: var(--banner-font-size);
 }
