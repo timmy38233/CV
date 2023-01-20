@@ -80,7 +80,7 @@ li {
     font-weight: 100;
     text-align: center;
 
-    animation: welcome-text-shadow 1s ease-in-out 1s 1 forwards;
+    animation: welcome-text-shadow 2s ease-in-out 1s 1 forwards;
 }
 
 .welcome__textwrapper::before {
@@ -101,12 +101,16 @@ li {
         text-shadow: 0 0 0 rgba(0, 0, 0, 0);
     }
 
-    33% {
-        text-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    50% {
+        text-shadow: 10px 10px 0 var(--background-color);
+    }
+
+    75% {
+        text-shadow: 10px 10px 0 var(--background-color);
     }
 
     100% {
-        text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
     }
 }
 
@@ -314,7 +318,7 @@ li {
 }
 
 @media screen and (max-width: 700px) {
-    
+
     .welcome {
         flex-direction: column;
         align-items: center;
